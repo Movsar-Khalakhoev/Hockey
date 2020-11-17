@@ -1,0 +1,32 @@
+$partition_text_color: whitesmoke
+
+.navbar
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 50px
+  list-style-type: none
+  background-color: cornflowerblue
+
+.nav_item
+  font-size: 13px
+  font-weight: bold
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  margin-right: 10px
+  &:last-child
+    margin-right: unset
+.nav_link
+  color: $partition_text_color
+  border-radius: 3px
+  border: 1px solid $partition_text_color
+  padding: 5px 10px
+  text-decoration: none
+  &:hover
+    color: darken($partition_text_color, 10%)
+    border-color: darken($partition_text_color, 10%)
+
+.nav_link.active
+  color: darken($partition_text_color, 10%)
+  border-color: darken($partition_text_color, 10%)
