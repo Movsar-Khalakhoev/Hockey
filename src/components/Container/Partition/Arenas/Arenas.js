@@ -1,16 +1,15 @@
 import React from 'react'
 import styles from './Arenas.module.sass'
 import {connect} from 'react-redux'
-import Arena from './Arena/Arena'
+import ArenaCard from './ArenaCard/ArenaCard'
 
 const Arenas = props => {
-  console.log(props.arenasList)
   return (
     <div className={styles.arenas_container}>
       <div className={styles.arenas_list}>
         {
           props.arenasList.map((arena, index) => {
-            return <Arena key={index} arena={arena} />
+            return <ArenaCard key={index} arena={arena} />
           })
         }
       </div>
