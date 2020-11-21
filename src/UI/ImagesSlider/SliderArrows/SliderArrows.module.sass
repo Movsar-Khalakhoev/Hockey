@@ -1,0 +1,49 @@
+.leftArrow
+  position: absolute
+  left: 0
+  z-index: 1000
+  height: 38px
+  width: 20px
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    width: 18px
+    height: 4px
+    background-color: white
+    transform: rotate(-60deg)
+    top: 10px
+    opacity: 1
+  &:after
+    content: ''
+    position: absolute
+    width: 18px
+    height: 4px
+    background-color: white
+    transform: rotate(60deg)
+    bottom: 10px
+
+.rightArrow
+  position: absolute
+  right: 0
+  z-index: 1000
+  height: 38px
+  width: 20px
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    width: 18px
+    height: 4px
+    background-color: white
+    transform: rotate(60deg)
+    top: 10px
+    opacity: 1
+  &:after
+    content: ''
+    position: absolute
+    width: 18px
+    height: 4px
+    background-color: white
+    transform: rotate(-60deg)
+    bottom: 10px

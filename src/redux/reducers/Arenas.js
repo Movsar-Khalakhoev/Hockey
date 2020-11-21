@@ -1,11 +1,12 @@
 const initialState = {
   arenasList: [
     {
-      name: 'Название ледовой арены',
+      name: 'Названиfdsfgdfе ледовой арены',
       id: '1',
-      images: ['https://clck.ru/RyAsn', 'https://clck.ru/RyAsn'],
+      images: ['C://Users/xomix/Downloads/img_.jpg', 'C://Users/xomix/Downloads/img_.jpg'],
       address: 'Адресс; Целиком выведется на сайт',
-      coordinates: '55.794521953672785,37.94621561726508',
+      site: 'http://www.ledarena.ru/',
+      coordinates: ['55.794521953672785' ,'37.94621561726508'],
       social: {
         instagram: 'https://www.instagram.com/',
         vk: 'https://vk.com/',
@@ -13,7 +14,7 @@ const initialState = {
         youtube: 'https://www.youtube.com/'
       },
       additional: [
-        ['information1', 'значение'],
+        ['information1', 'знаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчение'],
         ['information2', 'значение'],
         ['information3', 'значение'],
       ],
@@ -22,9 +23,10 @@ const initialState = {
     {
       name: 'Название ледовой арены',
       id: '2',
-      images: ['https://clck.ru/RyAsn', 'https://clck.ru/RyAsn'],
-      address: 'Адресс; Целиком выведется на сайт',
-      coordinates: '55.794521953672785,37.94621561726508',
+      images: ['C://Users/xomix/Downloads/img_.jpg', 'C://Users/xomix/Downloads/img_.jpg'],
+      address: 'Адресс; Целиком выведеsdfтся на сайт',
+      coordinates: ['55.794521953672785' ,'37.94621561726508'],
+      site: 'http://www.ledarena.ru/',
       social: {
         instagram: 'https://www.instagram.com/',
         vk: 'https://vk.com/',

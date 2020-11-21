@@ -3,8 +3,8 @@
   flex-grow: 1
   &_container
     height: 202px
-    width: 100%
     display: flex
+    flex-grow: 1
     border: 1px solid #000
 
 .name
@@ -15,17 +15,9 @@
   &:hover
     //animation: marquee 10s linear infinite alternate
 
-.map
-  width: 100% !important
-  height: 100% !important
-  &_container
-    position: relative
+.map_container
     width: 35%
     height: 100%
-
-.map > .ymaps-2-1-77-map
-  width: 100% !important
-  height: 100% !important
 .link
   color: #000
   text-decoration: none
@@ -42,13 +34,11 @@
     overflow: visible
 
 .additional
-  width: 70%
   margin: 10px 0
   white-space: nowrap
   overflow: hidden
   -ms-text-overflow: ellipsis
   text-overflow: ellipsis
-  &_item
   &:hover
     overflow: visible
 
@@ -58,6 +48,8 @@
   overflow: hidden
   -ms-text-overflow: ellipsis
   text-overflow: ellipsis
+  &:hover
+    overflow: visible
 
 .social
   display: flex
@@ -81,6 +73,8 @@
   overflow: hidden
   -ms-text-overflow: ellipsis
   text-overflow: ellipsis
+  &:hover
+    overflow: visible
 
 .site_link
   text-decoration: none

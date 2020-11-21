@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Container.module.sass'
+// import styles from './Container.module.sass'
 import Navbar from './Navbar/Navbar'
 import Partition from './Partition/Partition'
 
