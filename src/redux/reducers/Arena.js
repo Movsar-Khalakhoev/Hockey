@@ -9,7 +9,7 @@ import {
 const initialState = {
   name: 'Название ледовой арены',
   id: '1',
-  images: ['C://Users/xomix/Downloads/img_.jpg', 'C://Users/xomix/Downloads/img_.jpg'],
+  images: ['https://cutt.ly/zhtUZO4', 'https://cutt.ly/zhtUZO4'],
   address: 'Адресс; Целиком выведется на сайт',
   site: 'http://www.ledarena.ru/',
   coordinates: ['55.794521953672785' ,'37.94621561726508'],
@@ -28,7 +28,7 @@ const initialState = {
   rentedHours: [],
   childrenCommands: [
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -40,7 +40,7 @@ const initialState = {
       }
     },
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -52,7 +52,7 @@ const initialState = {
       }
     },
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -64,7 +64,7 @@ const initialState = {
       }
     },
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -76,7 +76,7 @@ const initialState = {
       }
     },
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -88,7 +88,7 @@ const initialState = {
       }
     },
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -100,7 +100,7 @@ const initialState = {
       }
     },
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -112,7 +112,7 @@ const initialState = {
       }
     },
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -124,7 +124,7 @@ const initialState = {
       }
     },
     {
-      image: 'ссылка на картинку',
+      image: 'https://cutt.ly/zhtUZO4',
       name: 'название команды',
       phone: '+7777 777 77 77',
       email: 'example@mail.ru',
@@ -133,6 +133,41 @@ const initialState = {
         vk: 'если есть, то ссылка; если нет, то null',
         telegram: 'если есть, то ссылка; если нет, то null',
         youtube: 'если есть, то ссылка; если нет, то null'
+      }
+    }
+  ],
+  "mensCommands": [
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды",
+      "phone": "+7777 777 77 77",
+      "social": {
+        "instagram": "если есть, то ссылка; если нет, то null",
+        "vk": "если есть, то ссылка; если нет, то null",
+        "telegram": "если есть, то ссылка; если нет, то null",
+        "youtube": "если есть, то ссылка; если нет, то null"
+      }
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды",
+      "phone": "+7777 777 77 77",
+      "social": {
+        "instagram": "если есть, то ссылка; если нет, то null",
+        "vk": "если есть, то ссылка; если нет, то null",
+        "telegram": "если есть, то ссылка; если нет, то null",
+        "youtube": "если есть, то ссылка; если нет, то null"
+      }
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды",
+      "phone": "+7777 777 77 77",
+      "social": {
+        "instagram": "если есть, то ссылка; если нет, то null",
+        "vk": "если есть, то ссылка; если нет, то null",
+        "telegram": "если есть, то ссылка; если нет, то null",
+        "youtube": "если есть, то ссылка; если нет, то null"
       }
     }
   ],

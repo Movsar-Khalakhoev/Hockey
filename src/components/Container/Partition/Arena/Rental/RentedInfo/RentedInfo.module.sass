@@ -1,0 +1,75 @@
+.rented
+  display: flex
+  &_info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    flex-grow: 1
+  &_button
+    width: 110px
+    height: 40px
+    margin-top: 20px
+    border: none
+    background-color: #44944a
+    opacity: .8
+    transition: .3s all
+    cursor: pointer
+    &:hover
+      opacity: 1
+  &_error
+    position: absolute
+    bottom: 10px
+    right: 10px
+    color: #e32636
+    font-weight: bold
+
+.checkboxes
+  display: flex
+  width: 100%
+  justify-content: space-between
+
+.checkbox
+  &_rented, &_unbooked, &_booked
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    width: 40px
+    height: 40px
+    margin-right: 10px
+  &_rented, &_booked
+    background-color: #E32636
+    opacity: .2
+    &:after
+      content: ''
+      position: absolute
+      width: 8px
+      height: 20px
+      border: solid white
+      border-width: 0 6px 6px 0
+      transform: rotate(45deg)
+      margin-bottom: 5px
+  &_unbooked
+    background-color: #44944A
+    opacity: .8
+  &_booked
+    opacity: .8
+  &_info
+    display: flex
+    align-items: center
+
+.booked
+  &_date
+    display: block
+    margin-top: 30px
+    font-size: 19px
+  &_hours
+    display: block
+    font-size: 19px
+
+.lds_ring_small
+  display: inline-block
+  position: relative
+  width: 20px
+  height: 20px
