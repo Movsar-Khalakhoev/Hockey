@@ -1,0 +1,76 @@
+.arena_content
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding: 10px 0
+
+.information
+  width: 65%
+  height: 100%
+  font-size: 19px
+
+.site
+  margin-top: 10px
+  white-space: nowrap
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  text-overflow: ellipsis
+  &:hover
+    overflow: visible
+
+.site_link
+  text-decoration: none
+  color: blue
+  &:hover
+    text-decoration: underline
+
+.additional
+  display: flex
+  flex-direction: column
+  margin: 30px 0
+  width: 70%
+  &_item
+    width: 100%
+    position: relative
+    margin-bottom: 10px
+    padding-bottom: 10px
+    word-break: break-all
+    hyphens: auto
+    &:after
+      position: absolute
+      content: ''
+      background-color: grey
+      height: 1px
+      bottom: 0
+      left: 0
+      z-index: 1000
+      width: 100%
+
+.address, .working_hours
+  margin-top: 10px
+  white-space: nowrap
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  text-overflow: ellipsis
+  &:hover
+    overflow: visible
+
+.images
+  height: 400px
+  width: 400px
+
+.social
+  display: flex
+  margin-top: 15px
+
+.instagram, .telegram, .vk, .youtube
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 32px
+  height: 32px
+  margin-right: 20px
+  background-color: grey
+  -webkit-border-radius: 50%
+  -moz-border-radius: 50%
+  border-radius: 50%
