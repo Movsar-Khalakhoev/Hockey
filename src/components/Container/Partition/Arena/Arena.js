@@ -11,7 +11,7 @@ import {YMaps, Map, Placemark} from 'react-yandex-maps'
 import {getScheduleAction, rentIntervalAction} from '../../../../redux/actions/Arena'
 import {Link} from 'react-router-dom'
 
-const Arena = ({arena, rentedHours, childrenCommands, changeRentedDay, rentInterval, match}) => {
+const Arena = ({arena, rentedHours, childrenCommands, mensCommands, changeRentedDay, rentInterval, match}) => {
   const socialImages = {instagram, vk, telegram, youtube}
   const rented = new Array(24).fill('').map((_, i) => i)
   const [hours, setHours] = useState([])
@@ -70,91 +70,92 @@ const Arena = ({arena, rentedHours, childrenCommands, changeRentedDay, rentInter
   }
 
   return (
-    <div className={styles.arena_container}>
-      <div className={styles.arena_content}>
-        <div className={styles.information}>
-          <h1 className={styles.name}>{arena.name}</h1>
-          <div className={styles.additional}>
-            {
-              arena.additional.map((info, index) => (
-                <span className={styles.additional_item} key={index}>{`${info[0]}: ${info[1]}`}</span>
-              ))
-            }
-          </div>
-          <p className={styles.address}><strong>Адрес</strong>: <span>{arena.address}</span></p>
-          <p className={styles.site}><strong>Сайт</strong>:
-            <a className={styles.site_link} target='_blank' rel="noreferrer" href={arena.site}> {arena.name}</a>
-          </p>
-          <p className={styles.working_hours}><strong>График работы</strong>: {arena.workingHours}</p>
-          <div className={styles.social}>
-            {
-              Object.keys(arena.social).map(social => (
-                <a href={arena.social[social]} target='_blank' rel="noreferrer" key={social} className={styles[social]}>
-                  <img src={socialImages[social]} alt={social}/>
-                </a>
-              ))
-            }
-          </div>
-        </div>
-        <div className={styles.images}>
-          <ImagesSlider
-            images={arena.images}
-            width='100%'
-            height='100%'
-          />
-        </div>
-      </div>
-
-      <div className={styles.map}>
-        <YMaps>
-          <Map
-            defaultState={{ center: [+arena.coordinates[0], +arena.coordinates[1]], zoom: 15 }}
-            width='100%'
-            height='100%'>
-            <Placemark geometry={[+arena.coordinates[0], +arena.coordinates[1]]} />
-          </Map>
-        </YMaps>
-      </div>
-
-      <div className={styles.rental}>
-        <h2 className={styles.title}>Аренда льда</h2>
-
-        <div className={styles.rented_container}>
-          <DatePicker
-            className={styles.datepicker}
-            onChange={date => updateSchedule(date)}
-            value={date}
-            clearIcon={null}
-            closeCalendar={false}
-          />
-          <div className={styles.rented}>
-            <div className={styles.rented_hours}>
+    <>
+      <div className={styles.arena_container}>
+        <div className={styles.arena_content}>
+          <div className={styles.information}>
+            <h1 className={styles.name}>{arena.name}</h1>
+            <div className={styles.additional}>
               {
-                arena.scheduleLoading
-                ? <div className={styles.center}>
-                    <div className={styles.lds_ring}>
-                      <div/>
-                      <div/>
-                      <div/>
-                      <div/>
-                    </div>
-                  </div>
-                : rented.map((hour, index) => {
-                  let rentedHour = false
-                  let checkboxColor = 'rgb(227,38,54)'
-                  if (rentedHours.includes(index)) {
-                    rentedHour = true
-                    checkboxColor = 'rgb(71,167,106)'
-                  }
+                arena.additional.map((info, index) => (
+                  <span className={styles.additional_item} key={index}>{`${info[0]}: ${info[1]}`}</span>
+                ))
+              }
+            </div>
+            <p className={styles.address}><strong>Адрес</strong>: <span>{arena.address}</span></p>
+            <p className={styles.site}><strong>Сайт</strong>:
+              <a className={styles.site_link} target='_blank' rel="noreferrer" href={arena.site}> {arena.name}</a>
+            </p>
+            <p className={styles.working_hours}><strong>График работы</strong>: {arena.workingHours}</p>
+            <div className={styles.social}>
+              {
+                Object.keys(arena.social).map(social => (
+                  <a href={arena.social[social]} target='_blank' rel="noreferrer" key={social} className={styles[social]}>
+                    <img src={socialImages[social]} alt={social}/>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+          <div className={styles.images}>
+            <ImagesSlider
+              images={arena.images}
+              width='100%'
+              height='100%'
+            />
+          </div>
+        </div>
 
-                  let booked = false
-                  if (hours.includes(index)) {
-                    booked = true
-                  }
-                  return <span
-                    key={index}
-                    className={styles.hour_container}
-                  >
+        <div className={styles.map}>
+          <YMaps>
+            <Map
+              defaultState={{ center: [+arena.coordinates[0], +arena.coordinates[1]], zoom: 15 }}
+              width='100%'
+              height='100%'>
+              <Placemark geometry={[+arena.coordinates[0], +arena.coordinates[1]]} />
+            </Map>
+          </YMaps>
+        </div>
+
+        <div className={styles.rental}>
+          <h2 className={styles.title}>Аренда льда</h2>
+
+          <div className={styles.rented_container}>
+            <DatePicker
+              className={styles.datepicker}
+              onChange={date => updateSchedule(date)}
+              value={date}
+              clearIcon={null}
+              closeCalendar={false}
+            />
+            <div className={styles.rented}>
+              <div className={styles.rented_hours}>
+                {
+                  arena.scheduleLoading
+                    ? <div className={styles.center}>
+                      <div className={styles.lds_ring}>
+                        <div/>
+                        <div/>
+                        <div/>
+                        <div/>
+                      </div>
+                    </div>
+                    : rented.map((hour, index) => {
+                      let rentedHour = false
+                      let checkboxColor = 'rgb(227,38,54)'
+                      if (rentedHours.includes(index)) {
+                        rentedHour = true
+                        checkboxColor = 'rgb(71,167,106)'
+                      }
+
+                      let booked = false
+                      if (hours.includes(index)) {
+                        booked = true
+                      }
+                      return <span
+                        key={index}
+                        className={styles.hour_container}
+                      >
                 <input
                   style={{color: checkboxColor}}
                   onChange={() => changeBookedHoursState(index)}
@@ -169,30 +170,30 @@ const Arena = ({arena, rentedHours, childrenCommands, changeRentedDay, rentInter
                 </label>
                 <small className={styles.hour_interval}>{`${index}:00`}<hr/>{`${index + 1}:00`}</small>
               </span>
-                })
-              }
-            </div>
-            <div className={styles.rented_info}>
-              <div className={styles.checkboxes}>
-                <p className={styles.checkbox_info}><span className={styles.checkbox_rented}/> - арендован</p>
-                <p className={styles.checkbox_info}><span className={styles.checkbox_unbooked}/> - не арендован</p>
-                <p className={styles.checkbox_info}><span className={styles.checkbox_booked}/> - выбрано</p>
+                    })
+                }
               </div>
-              <span className={styles.booked_date}>
+              <div className={styles.rented_info}>
+                <div className={styles.checkboxes}>
+                  <p className={styles.checkbox_info}><span className={styles.checkbox_rented}/> - арендован</p>
+                  <p className={styles.checkbox_info}><span className={styles.checkbox_unbooked}/> - не арендован</p>
+                  <p className={styles.checkbox_info}><span className={styles.checkbox_booked}/> - выбрано</p>
+                </div>
+                <span className={styles.booked_date}>
                 <strong>Дата аренды: </strong>
-                {`${date.getDate()} ${date.toLocaleString('ru', {month: 'long'})} ${date.getFullYear()}`}
+                  {`${date.getDate()} ${date.toLocaleString('ru', {month: 'long'})} ${date.getFullYear()}`}
               </span>
-              <span className={styles.booked_hours}>
+                <span className={styles.booked_hours}>
                 <strong>Время аренды: </strong>
                   {getHoursInterval() || 'Не выбрано'}
               </span>
-              <button
-                onClick={checkRight}
-                className={styles.rented_button}
-              >
-                {
-                  arena.rentIntervalLoading
-                    ? <div className={styles.center}>
+                <button
+                  onClick={checkRight}
+                  className={styles.rented_button}
+                >
+                  {
+                    arena.rentIntervalLoading
+                      ? <div className={styles.center}>
                         <div className={styles.lds_ring_small}>
                           <div/>
                           <div/>
@@ -200,50 +201,81 @@ const Arena = ({arena, rentedHours, childrenCommands, changeRentedDay, rentInter
                           <div/>
                         </div>
                       </div>
-                    : 'Арендовать'
-                }
-              </button>
-              {
-                error
-                  ? <span className={styles.rented_error}>
+                      : 'Арендовать'
+                  }
+                </button>
+                {
+                  error
+                    ? <span className={styles.rented_error}>
                       Пожалуйста, выберите время аренды
                     </span>
-                  : null
-              }
+                    : null
+                }
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className={styles.children}>
-        <h2 className={styles.title}>Список детских команд</h2>
-        <div className={styles.commands_list}>
-          {
-            childrenCommands.map((command, index) => {
-              return <div key={index} className={styles.command_card}>
-                <div className={styles.command_image_container}>
-                  <img className={styles.command_image} src={command.image} alt={command.name}/>
-                </div>
-                <Link className={styles.command_info} to={`/app/commands/childs/${index}`} >
-                  <h3 className={styles.command_name}>{command.name}</h3>
-                  <a href={`tel:${command.phone}`} className={styles.command_phone}>{command.phone}</a>
-                  <a href={`mailto:${command.email}`} className={styles.command_email}>{command.email}</a>
-                  <div className={styles.social}>
-                    {
-                      Object.keys(command.social).map(social => (
-                        <a href={command.social[social]} target='_blank' rel="noreferrer" key={social} className={styles[social]}>
-                          <img src={socialImages[social]} alt={social}/>
-                        </a>
-                      ))
-                    }
+        <div className={styles.commands}>
+          <h2 className={styles.title}>Список детских команд</h2>
+          <div className={styles.commands_list}>
+            {
+              childrenCommands.map((command, index) => {
+                return <div key={index} className={styles.command_card}>
+                  <div className={styles.command_image_container}>
+                    <img className={styles.command_image} src={command.image} alt={command.name}/>
                   </div>
-                </Link>
-              </div>
-            })
-          }
+                  <Link className={styles.command_info} to={`/app/commands/childs/${index}`} >
+                    <h3 className={styles.command_name}>{command.name}</h3>
+                    <a href={`tel:${command.phone}`} className={styles.command_phone}>{command.phone}</a>
+                    <a href={`mailto:${command.email}`} className={styles.command_email}>{command.email}</a>
+                    <div className={styles.social}>
+                      {
+                        Object.keys(command.social).map(social => (
+                          <a href={command.social[social]} target='_blank' rel="noreferrer" key={social} className={styles[social]}>
+                            <img src={socialImages[social]} alt={social}/>
+                          </a>
+                        ))
+                      }
+                    </div>
+                  </Link>
+                </div>
+              })
+            }
+          </div>
+        </div>
+
+        <div className={styles.commands}>
+          <h2 className={styles.title}>Список взрослых команд</h2>
+          <div className={styles.commands_list}>
+            {
+              mensCommands.map((command, index) => {
+                return <div key={index} className={styles.command_card}>
+                  <div className={styles.command_image_container}>
+                    <img className={styles.command_image} src={command.image} alt={command.name}/>
+                  </div>
+                  <Link className={styles.command_info} to={`/app/commands/childs/${index}`} >
+                    <h3 className={styles.command_name}>{command.name}</h3>
+                    <a href={`tel:${command.phone}`} className={styles.command_phone}>{command.phone}</a>
+                    <a href={`mailto:${command.email}`} className={styles.command_email}>{command.email}</a>
+                    <div className={styles.social}>
+                      {
+                        Object.keys(command.social).map(social => (
+                          <a href={command.social[social]} target='_blank' rel="noreferrer" key={social} className={styles[social]}>
+                            <img src={socialImages[social]} alt={social}/>
+                          </a>
+                        ))
+                      }
+                    </div>
+                  </Link>
+                </div>
+              })
+            }
+          </div>
         </div>
       </div>
-    </div>
+      <div className={styles.footer}/>
+    </>
   )
 }
 
@@ -251,7 +283,8 @@ function mapStateToProps(state) {
   return {
     arena: state.arena,
     rentedHours: state.arena.rentedHours,
-    childrenCommands: state.arena.childrenCommands
+    childrenCommands: state.arena.childrenCommands,
+    mensCommands: state.arena.mensCommands
   }
 }
 

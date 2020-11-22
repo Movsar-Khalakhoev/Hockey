@@ -3,9 +3,8 @@
   flex-direction: column
   align-items: center
   width: 100%
-  padding: 0 calc((100% - 980px)/2)
+  padding: 0 calc((100% - 980px)/2) 20px
   background-color: whitesmoke
-  padding-bottom: 400px
 
 .arena_content
   display: flex
@@ -304,15 +303,14 @@
 
 
 
-.children
+.commands
   width: 100%
-  margin-top: 20px
-
-.commands_list
-  padding: 15px 5px
-  border: 1px solid #000
-  max-height: 700px
-  overflow-y: auto
+  margin-top: 40px
+  &_list
+    padding: 15px 5px
+    border: 1px solid #000
+    max-height: 700px
+    overflow-y: auto
 
 
 .command
@@ -348,3 +346,8 @@
     text-decoration: none
     //&:hover
     //  text-decoration: underline
+
+.footer
+  width: 100%
+  height: 50px
+  background-color: darkslategrey
