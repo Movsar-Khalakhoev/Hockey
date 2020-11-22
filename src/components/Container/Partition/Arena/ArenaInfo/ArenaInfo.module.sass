@@ -1,0 +1,89 @@
+.info
+  height: 100%
+  flex-grow: 1
+  &_container
+    height: 202px
+    display: flex
+    flex-grow: 1
+    border: 1px solid #000
+
+.name
+  overflow: hidden
+  white-space: nowrap
+  -ms-text-overflow: ellipsis
+  text-overflow: ellipsis
+  &:hover
+    //animation: marquee 10s linear infinite alternate
+
+.map_container
+    width: 35%
+    height: 100%
+.link
+  color: #000
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.more
+  width: 65%
+  white-space: nowrap
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  text-overflow: ellipsis
+  &:hover
+    overflow: visible
+
+.additional
+  margin: 10px 0
+  white-space: nowrap
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  text-overflow: ellipsis
+  &:hover
+    overflow: visible
+
+.address, .working_hours
+  margin-top: 10px
+  white-space: nowrap
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  text-overflow: ellipsis
+  &:hover
+    overflow: visible
+
+.social
+  display: flex
+  margin-top: 15px
+
+.instagram, .telegram, .vk, .youtube
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 32px
+  height: 32px
+  margin-right: 15px
+  background-color: grey
+  -webkit-border-radius: 50%
+  -moz-border-radius: 50%
+  border-radius: 50%
+
+.site
+  margin-top: 10px
+  white-space: nowrap
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  text-overflow: ellipsis
+  &:hover
+    overflow: visible
+
+.site_link
+  text-decoration: none
+  color: blue
+  &:hover
+    text-decoration: underline
+
+@keyframes marquee
+  from
+    text-indent: 100%
+  to
+    text-indent: 0
