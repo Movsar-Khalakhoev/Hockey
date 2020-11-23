@@ -11,20 +11,26 @@ export const ArenaId = React.createContext(null)
 
 const Arena = ({childrenCommands, mensCommands, match}) => {
   return (
-    <ArenaId.Provider value={match.params.id}>
-      <div className={styles.arena_container}>
-        <Main />
+      <ArenaId.Provider value={match.params.id}>
+        <div
+          className={styles.arena_container}
+          style={{
+            height: `${window.innerHeight - 115}px`
+          }}
+        >
+          <Main />
 
-        <ArenaMap />
+          <ArenaMap />
 
-        <Rental />
+          <Rental />
 
-        <Commands commands={childrenCommands}/>
+          <Commands commands={childrenCommands}/>
 
-        <Commands commands={mensCommands} />
-      </div>
-      <Footer />
-    </ArenaId.Provider>
+          <Commands commands={mensCommands} />
+        </div>
+        <span className={styles.arena_overlay}/>
+        <Footer />
+      </ArenaId.Provider>
   )
 }
 

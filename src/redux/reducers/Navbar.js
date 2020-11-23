@@ -1,5 +1,5 @@
 const initialState = {
-  arenas: 'Арена',
+  arenas: 'Арены',
   cloakroom: 'Раздевалка',
   spareBench: 'Скамейка запасных'
 }

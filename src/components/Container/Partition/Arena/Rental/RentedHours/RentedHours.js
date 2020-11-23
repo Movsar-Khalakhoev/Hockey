@@ -45,7 +45,7 @@ const RentedHours = ({rentedHours, scheduleLoading, hours, setHours}) => {
                 <span className={styles.hour_span}/>
                 <label className={styles.hour_label} htmlFor={index}>
                 </label>
-                <small className={styles.hour_interval}>{`${index}:00`}<hr/>{`${index + 1}:00`}</small>
+                <label htmlFor={index} className={styles.hour_interval}>{`${index}:00`}<hr/>{`${index + 1}:00`}</label>
               </span>
           })
       }

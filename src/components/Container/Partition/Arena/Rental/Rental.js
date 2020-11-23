@@ -27,7 +27,6 @@ const Rental = ({changeRentedDay}) => {
   return (
     <div className={styles.rental}>
       <h2 className={styles.title}>Аренда льда</h2>
-
       <div className={styles.rented_container}>
         <DatePicker
           className={styles.datepicker}

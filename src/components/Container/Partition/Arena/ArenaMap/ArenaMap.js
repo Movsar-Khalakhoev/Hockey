@@ -5,12 +5,12 @@ import {connect} from 'react-redux'
 
 const ArenaMap = ({coordinates}) => {
   return (
-    <div className={styles.map}>
+    <div className={styles.map} id='map'>
       <YMaps>
         <Map
           defaultState={{ center: [+coordinates[0], +coordinates[1]], zoom: 15 }}
           width='100%'
-          height='100%'>
+          height='400px'>
           <Placemark geometry={[+coordinates[0], +coordinates[1]]} />
         </Map>
       </YMaps>

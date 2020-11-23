@@ -1,56 +1,68 @@
+$text_color: white
+
 .info
+  display: flex
+  flex-direction: column
   height: 100%
   flex-grow: 1
   &_container
-    height: 202px
+    flex-grow: 1
     width: 100%
     display: flex
-    border: 1px solid #000
 
 .name
+  display: inline-block
+  height: 28px
   overflow: hidden
   white-space: nowrap
   -ms-text-overflow: ellipsis
   text-overflow: ellipsis
-  &:hover
-    //animation: marquee 10s linear infinite alternate
-
-.map
-  width: 100% !important
-  height: 100% !important
-  &_container
-    position: relative
-    width: 35%
-    height: 100%
-
-.map > .ymaps-2-1-77-map
-  width: 100% !important
-  height: 100% !important
-.link
   color: #000
-  text-decoration: none
+  padding: 0 10px
+  background-color: $text_color
+  border-radius: 15px
+  transition: all .3s
   &:hover
-    text-decoration: underline
+    background-color: darken($text_color, 10%)
 
 .more
+  display: flex
+  flex-direction: column
+  justify-content: space-around
   width: 65%
+  height: 100%
+  flex-grow: 1
   white-space: nowrap
   overflow: hidden
   -ms-text-overflow: ellipsis
   text-overflow: ellipsis
   &:hover
     overflow: visible
-
-.additional
-  width: 70%
-  margin: 10px 0
-  white-space: nowrap
-  overflow: hidden
-  -ms-text-overflow: ellipsis
-  text-overflow: ellipsis
-  &_item
+    
+.map_show
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $text_color
+  width: 60px
+  height: 60px
+  right: 20px
+  bottom: 20px
+  background-color: lighten(#2e519e, 10%)
+  white-space: pre-line
+  text-align: center
+  font-weight: bold
+  font-size: 14px
+  border-radius: 5px
+  cursor: pointer
+  transition: all .3s
   &:hover
-    overflow: visible
+    background-color: #2e519e
+    color: darken($text_color, 20%)
+  &_img
+    width: 50%
+    height: 50%
 
 .address, .working_hours
   margin-top: 10px
@@ -58,6 +70,9 @@
   overflow: hidden
   -ms-text-overflow: ellipsis
   text-overflow: ellipsis
+
+.working_hours
+  margin-bottom: 50px
 
 .social
   display: flex

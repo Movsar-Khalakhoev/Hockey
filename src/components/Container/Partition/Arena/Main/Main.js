@@ -22,8 +22,8 @@ const Main = ({arena}) => {
           }
         </div>
         <p className={styles.address}><strong>Адрес</strong>: <span>{arena.address}</span></p>
-        <p className={styles.site}><strong>Сайт</strong>:
-          <a className={styles.site_link} target='_blank' rel="noreferrer" href={arena.site}> {arena.name}</a>
+        <p className={styles.site}><strong>Сайт: </strong>
+          <a className={styles.site_link} target='_blank' rel="noreferrer" href={arena.site}>{arena.name}</a>
         </p>
         <p className={styles.working_hours}><strong>График работы</strong>: {arena.workingHours}</p>
         <div className={styles.social}>
