@@ -1,20 +1,209 @@
 {
-  "rentedHours": [
+  "spareBench_commands": [
     {
-      "21_11_2020": {
-        "hours": [3,4,5,7,8,9,19,20]
-      },
-      "25_11_2020": {
-        "hours": [3,4,5,7,14,15,19,20]
-      }
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
     },
     {
-      "21_11_2020": {
-        "hours": [7,8,12,13,16,17,18,23]
-      },
-      "25_11_2020": {
-        "hours": [3,4,5,7,19,20]
-      }
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "название команды1",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    }
+  ],
+  "spareBench_players": [
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "ЦП игрок"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Имя Фамилия",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "Вратарь"
+    },
+    {
+      "image": "https://cutt.ly/zhtUZO4",
+      "name": "Сидоров Василий",
+      "phone": "+7777 777 77 77",
+      "email": "example@mail.ru",
+      "player_position": "Вратарь"
     }
   ]
 }

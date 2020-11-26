@@ -1,0 +1,21 @@
+@import "src/_stylesVariables.sass"
+
+.spare_bench
+  position: relative
+  width: calc(#{$items_list_component_width} + #{$filter_component_width} + 10px)
+  height: calc(100vh - #{$navbar_height})
+  margin: auto
+  padding: 5px 0
+  z-index: 3
+
+.content
+  position: relative
+  display: flex
+  justify-content: space-between
+  z-index: 3
+  width: 100%
+  margin-top: 5px
+  height: calc( 100% - #{$search_header_height} - 5px)
+  -moz-border-radius: $components_border_radius
+  border-radius: $components_border_radius
+  overflow: hidden

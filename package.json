@@ -15,6 +15,7 @@
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-select": "^3.1.1",
     "react-slick": "^0.27.13",
     "react-yandex-maps": "^4.4.0",
     "redux": "^4.0.5",
@@ -23,6 +24,7 @@
     "web-vitals": "^0.2.4",
     "yandex-map-react": "^1.1.1"
   },
+  "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

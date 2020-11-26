@@ -5,7 +5,9 @@ import ArenaCard from './ArenaCard/ArenaCard'
 
 const Arenas = props => {
   return (
-    <div className={styles.arenas_container}>
+    <div
+      className={styles.arenas_container}
+    >
       <div className={styles.arenas_list}>
         {
           props.arenasList.map((arena, index) => {
@@ -13,6 +15,7 @@ const Arenas = props => {
           })
         }
       </div>
+      <span className={styles.arenas_list_overlay}/>
     </div>
   )
 }

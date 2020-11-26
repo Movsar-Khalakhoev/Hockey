@@ -1,14 +1,14 @@
 import React from "react"
-import {YMaps, Map, Placemark} from 'react-yandex-maps'
 import styles from "./ArenaInfo.module.sass"
 import instagram from '../../../../../../img/social/instagram.png'
 import vk from '../../../../../../img/social/vk.png'
 import telegram from '../../../../../../img/social/telegram.png'
 import youtube from '../../../../../../img/social/youtube.png'
 import {Link} from 'react-router-dom'
+import mapImage from '../../../../../../img/arenaCard/location.svg'
 
 
-const ArenaInfo = ({info, center, zoom}) => {
+const ArenaInfo = ({info}) => {
   const socialImages = {instagram, vk, telegram, youtube}
   const link = `/app/arenas/${info.id}`
   return (
@@ -35,20 +35,9 @@ const ArenaInfo = ({info, center, zoom}) => {
               ))
             }
           </div>
-        </div>
-        <div className={styles.map_container}>
-          <YMaps>
-            <Map
-              defaultState={{ center: [+info.coordinates[0], +info.coordinates[1]], zoom: 15 }}
-              style={{
-              width: '100%',
-              height: '100%',
-              position: 'absolute',
-              }}
-            >
-              <Placemark geometry={[+info.coordinates[0], +info.coordinates[1]]} />
-            </Map>
-          </YMaps>
+          <Link to={link} className={styles.map_show}>
+            <img className={styles.map_show_img} src={mapImage} alt="Показать на карте"/>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,49 @@
+@import "src/_stylesVariables.sass"
+
+.header
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: $search_header_height
+  background-color: $main_color
+  z-index: 3
+  border-radius: $components_border_radius
+
+.search_mode
+  display: flex
+  align-items: center
+  height: 100%
+  padding: 0 50px 0 20px
+  background: $main_color
+  border-bottom-left-radius: $components_border_radius
+  border-top-left-radius: $components_border_radius
+  background: linear-gradient(90deg, $main_color_lighten 0%, $main_color 96%)
+
+.commands_mode, .players_mode, .submit_yours
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 40px
+  padding: 0 30px
+  background-color: $main_color_darken
+  border: none
+  cursor: pointer
+  text-decoration: none
+  border-radius: $button_border_radius
+  font-size: $button_text_font_size
+  font-weight: $button_text_font_weight
+  color: $button_text_color
+  transition: all $first_transition
+  &:hover
+    background-color: $main_color_darken_extra
+
+.active
+  background-color: $main_color_darken_extra
+
+.commands_mode
+  margin-right: 20px
+
+.submit_yours
+  margin-right: 20px
