@@ -1,0 +1,21 @@
+@import 'src/_stylesVariables.sass'
+
+.active_filter
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin-bottom: 15px
+
+.label
+  font-size: $input_label_font_size
+  font-weight: $input_label_font_weight
+  margin-bottom: 5px
+
+.input
+  height: $input_height
+  padding-left: 10px
+  border-radius: $input_border_radius
+  border: none
+  outline: none
+  &:focus
+    border: 2px solid $main_color

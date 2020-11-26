@@ -20,7 +20,7 @@ const initialState = {
     youtube: 'https://www.youtube.com/'
   },
   additional: [
-    ['information1', 'знаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчение'],
+    ['information1', 'знаasdе'],
     ['information2', 'значение'],
     ['information3', 'значение'],
   ],
@@ -38,136 +38,18 @@ const initialState = {
         telegram: 'если есть, то ссылка; если нет, то null',
         youtube: 'если есть, то ссылка; если нет, то null'
       }
-    },
-    {
-      image: 'https://cutt.ly/zhtUZO4',
-      name: 'название команды',
-      phone: '+7777 777 77 77',
-      email: 'example@mail.ru',
-      social: {
-        instagram: 'если есть, то ссылка; если нет, то null',
-        vk: 'если есть, то ссылка; если нет, то null',
-        telegram: 'если есть, то ссылка; если нет, то null',
-        youtube: 'если есть, то ссылка; если нет, то null'
-      }
-    },
-    {
-      image: 'https://cutt.ly/zhtUZO4',
-      name: 'название команды',
-      phone: '+7777 777 77 77',
-      email: 'example@mail.ru',
-      social: {
-        instagram: 'если есть, то ссылка; если нет, то null',
-        vk: 'если есть, то ссылка; если нет, то null',
-        telegram: 'если есть, то ссылка; если нет, то null',
-        youtube: 'если есть, то ссылка; если нет, то null'
-      }
-    },
-    {
-      image: 'https://cutt.ly/zhtUZO4',
-      name: 'название команды',
-      phone: '+7777 777 77 77',
-      email: 'example@mail.ru',
-      social: {
-        instagram: 'если есть, то ссылка; если нет, то null',
-        vk: 'если есть, то ссылка; если нет, то null',
-        telegram: 'если есть, то ссылка; если нет, то null',
-        youtube: 'если есть, то ссылка; если нет, то null'
-      }
-    },
-    {
-      image: 'https://cutt.ly/zhtUZO4',
-      name: 'название команды',
-      phone: '+7777 777 77 77',
-      email: 'example@mail.ru',
-      social: {
-        instagram: 'если есть, то ссылка; если нет, то null',
-        vk: 'если есть, то ссылка; если нет, то null',
-        telegram: 'если есть, то ссылка; если нет, то null',
-        youtube: 'если есть, то ссылка; если нет, то null'
-      }
-    },
-    {
-      image: 'https://cutt.ly/zhtUZO4',
-      name: 'название команды',
-      phone: '+7777 777 77 77',
-      email: 'example@mail.ru',
-      social: {
-        instagram: 'если есть, то ссылка; если нет, то null',
-        vk: 'если есть, то ссылка; если нет, то null',
-        telegram: 'если есть, то ссылка; если нет, то null',
-        youtube: 'если есть, то ссылка; если нет, то null'
-      }
-    },
-    {
-      image: 'https://cutt.ly/zhtUZO4',
-      name: 'название команды',
-      phone: '+7777 777 77 77',
-      email: 'example@mail.ru',
-      social: {
-        instagram: 'если есть, то ссылка; если нет, то null',
-        vk: 'если есть, то ссылка; если нет, то null',
-        telegram: 'если есть, то ссылка; если нет, то null',
-        youtube: 'если есть, то ссылка; если нет, то null'
-      }
-    },
-    {
-      image: 'https://cutt.ly/zhtUZO4',
-      name: 'название команды',
-      phone: '+7777 777 77 77',
-      email: 'example@mail.ru',
-      social: {
-        instagram: 'если есть, то ссылка; если нет, то null',
-        vk: 'если есть, то ссылка; если нет, то null',
-        telegram: 'если есть, то ссылка; если нет, то null',
-        youtube: 'если есть, то ссылка; если нет, то null'
-      }
-    },
-    {
-      image: 'https://cutt.ly/zhtUZO4',
-      name: 'название команды',
-      phone: '+7777 777 77 77',
-      email: 'example@mail.ru',
-      social: {
-        instagram: 'если есть, то ссылка; если нет, то null',
-        vk: 'если есть, то ссылка; если нет, то null',
-        telegram: 'если есть, то ссылка; если нет, то null',
-        youtube: 'если есть, то ссылка; если нет, то null'
-      }
     }
   ],
-  "mensCommands": [
+  mensCommands: [
     {
-      "image": "https://cutt.ly/zhtUZO4",
-      "name": "название команды",
-      "phone": "+7777 777 77 77",
-      "social": {
-        "instagram": "если есть, то ссылка; если нет, то null",
-        "vk": "если есть, то ссылка; если нет, то null",
-        "telegram": "если есть, то ссылка; если нет, то null",
-        "youtube": "если есть, то ссылка; если нет, то null"
-      }
-    },
-    {
-      "image": "https://cutt.ly/zhtUZO4",
-      "name": "название команды",
-      "phone": "+7777 777 77 77",
-      "social": {
-        "instagram": "если есть, то ссылка; если нет, то null",
-        "vk": "если есть, то ссылка; если нет, то null",
-        "telegram": "если есть, то ссылка; если нет, то null",
-        "youtube": "если есть, то ссылка; если нет, то null"
-      }
-    },
-    {
-      "image": "https://cutt.ly/zhtUZO4",
-      "name": "название команды",
-      "phone": "+7777 777 77 77",
-      "social": {
-        "instagram": "если есть, то ссылка; если нет, то null",
-        "vk": "если есть, то ссылка; если нет, то null",
-        "telegram": "если есть, то ссылка; если нет, то null",
-        "youtube": "если есть, то ссылка; если нет, то null"
+      image: 'https://cutt.ly/zhtUZO4',
+      name: 'название команды',
+      phone: '+7777 777 77 77',
+      social: {
+        instagram: 'если есть, то ссылка; если нет, то null',
+        vk: 'если есть, то ссылка; если нет, то null',
+        telegram: 'если есть, то ссылка; если нет, то null',
+        youtube: 'если есть, то ссылка; если нет, то null'
       }
     }
   ],
