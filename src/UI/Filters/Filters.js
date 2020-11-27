@@ -1,48 +1,53 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from './Filters.module.sass'
 import Select from 'react-select'
 import Input from '../Input/Input'
 import {Route, Switch} from 'react-router-dom'
 
 const Filters = props => {
+  const [newFilter, setNewFilter] = useState(null)
+
   const {
     isOverlay,
-    commandFiltersList,
-    playerFiltersList,
-    onChangeFiltersList,
-    activeFilters,
-    addedFilter,
-    onChangeFilterInput
+    selectFiltersList = [],
+    onChangeFiltersList = (...args) => {},
+    activeFilters = [],
+    onChangeFilterInput = (...args) => {}
   } = props
 
-  function SelectComponent(options, mode) {
+  function updateFiltersList(value, action, path) {
+    if (action.option) {
+      setNewFilter(action.option.value)
+    } else if (action.removedValue) {
+      setNewFilter(null)
+    }
+    onChangeFiltersList(value, action, path)
+  }
+
+  function SelectComponent(options, index, path) {
     return (
       <>
         <Select
-          key={mode}
+          key={index}
           options={options}
           isMulti
           isClearable={false}
-          onChange={onChangeFiltersList}
+          onChange={(value, action) => updateFiltersList(value, action, path)}
           placeholder='Выберите фильтр'
         />
-        {
-          mode !== ''
-            ? <div className={styles.list}>
-                {
-                  activeFilters.map(filter => {
-                    return <Input
-                      key={filter.value}
-                      isFocus={filter.value === addedFilter}
-                      filterLabel={filter.label}
-                      filterValue={filter.value}
-                      onChange={onChangeFilterInput}
-                    />
-                  })
-                }
-              </div>
-            : null
-        }
+        <div className={styles.list}>
+          {
+            activeFilters.map(filter => {
+              return <Input
+                key={filter.value}
+                isFocus={filter.value === newFilter}
+                filterLabel={filter.label}
+                filterValue={filter.value}
+                onChange={(value, filter) => onChangeFilterInput(value, filter, path)}
+              />
+            })
+          }
+        </div>
       </>
     )
   }
@@ -51,9 +56,22 @@ const Filters = props => {
     <div className={styles.filters}>
       <div className={styles.content}>
         <Switch>
-          <Route path='/app/spareBench/commands' render={() => SelectComponent(commandFiltersList, 'commands')} />
-          <Route path='/app/spareBench/players' render={() => SelectComponent(playerFiltersList, 'players')} />
-          <Route exact path='/app/spareBench' render={() => SelectComponent([], '')} />
+          {
+            selectFiltersList.map((filtersInfo, index) => {
+              return <Route
+                key={index}
+                exact={filtersInfo.exact ? filtersInfo.exact : false}
+                path={filtersInfo.renderPath}
+                render={() =>
+                  SelectComponent(
+                    filtersInfo.filters,
+                    index,
+                    filtersInfo.getDataPath
+                  )
+                }
+              />
+            })
+          }
         </Switch>
       </div>
       {

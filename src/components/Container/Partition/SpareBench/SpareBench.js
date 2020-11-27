@@ -1,70 +1,40 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import styles from './SpareBench.module.sass'
 import Header from './Header/Header'
-import Filters from '../../../../UI/Filters/Filters'
-import Container from './Container/Container'
 import {connect} from 'react-redux'
-import { useLocation } from 'react-router-dom'
-import {getSpareBenchAction} from '../../../../redux/actions/SpareBench'
+import ItemsContainerFilter from '../../../../UI/ItemsContainerFilter/ItemsContainerFilter'
+import ContainerInner from './ContainerInner/ContainerInner'
 
-const SpareBench = ({commandFiltersList, playerFiltersList, getItems}) => {
-  const [activeFiltersList, setActiveFiltersList] = useState([])
-  const [newFilter, setNewFilter] = useState(null)
-  const [filters, setFilters] = useState({})
-  const location = useLocation()
-  let timeout
-
-  function onChangeFiltersListHandler(value, action) {
-    setActiveFiltersList(value)
-    if (action.option) {
-      setNewFilter(action.option.value)
-    } else if (action.removedValue) {
-      const clonedFilters = {...filters}
-      delete clonedFilters[action.removedValue.value]
-      setFilters(clonedFilters)
-      setNewFilter(null)
-
-      setUpdatedItemsList(clonedFilters)
-    }
-  }
-
-  function setUpdatedItemsList(filters) {
-    const pathArr = location.pathname.split('/')
-    getItems(filters, pathArr[pathArr.length - 1])
-  }
-
-  function onChangeFilterHandler(event, filterName) {
-    clearTimeout(timeout)
-    timeout = setTimeout(async () => {
-      const text = event.target.value
-      setFilters({...filters, [filterName]: text})
-
-      setUpdatedItemsList({...filters, [filterName]: text})
-    }, 500)
-  }
-
-  useEffect(() => {
-    setActiveFiltersList([])
-    setNewFilter(null)
-    setFilters({})
-  }, [location.pathname])
-
+const SpareBench = ({commandFiltersList, playerFiltersList}) => {
   return (
     <div className={styles.spare_bench}>
       <Header />
-
-      <div className={styles.content}>
-        <Filters
-          isOverlay={true}
-          commandFiltersList={commandFiltersList}
-          playerFiltersList={playerFiltersList}
-          onChangeFiltersList={(value, action) => onChangeFiltersListHandler(value, action)}
-          activeFilters={activeFiltersList || []}
-          addedFilter={newFilter}
-          onChangeFilterInput={onChangeFilterHandler}
-        />
-        <Container />
-      </div>
+      <ItemsContainerFilter
+        contentClass={styles.content}
+        filterAttrs = {{
+          isOverlay: true,
+          selectFiltersList: [
+            {
+              renderPath: '/app/spareBench/commands',
+              getDataPath: 'spareBench_commands',
+              filters: commandFiltersList
+            },
+            {
+              renderPath: '/app/spareBench/players',
+              getDataPath: 'spareBench_players',
+              filters: playerFiltersList
+            },
+            {
+              renderPath: '/app/spareBench',
+              filters: [],
+              exact: true
+            }
+          ],
+        }}
+        data_path='spareBench_'
+      >
+        <ContainerInner />
+      </ItemsContainerFilter>
     </div>
   )
 }
@@ -72,15 +42,9 @@ const SpareBench = ({commandFiltersList, playerFiltersList, getItems}) => {
 
 function mapStateToProps(state) {
   return {
-    commandFiltersList: state.spareBench.commandFiltersList,
-    playerFiltersList: state.spareBench.playerFiltersList
+    commandFiltersList: state.filterContainer.spareBench_commandsFiltersList,
+    playerFiltersList: state.filterContainer.spareBench_playersFiltersList
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    getItems: (filters, mode) => dispatch(getSpareBenchAction(filters, mode))
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(SpareBench)
+export default connect(mapStateToProps)(SpareBench)

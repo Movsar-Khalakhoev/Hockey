@@ -1,0 +1,23 @@
+@import "src/_stylesVariables.sass"
+
+.overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  background-color: #c1c1c1
+  opacity: .5
+
+.content
+  position: relative
+  z-index: 3
+  display: flex
+  justify-content: space-between
+  border-radius: $components_border_radius
+  overflow: hidden
+
+.container
+  position: relative
+  width: $items_list_component_width
+  padding: 5px

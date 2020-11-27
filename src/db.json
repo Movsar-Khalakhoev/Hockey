@@ -205,5 +205,6 @@
       "email": "example@mail.ru",
       "player_position": "Вратарь"
     }
-  ]
+  ],
+  "cloakroom_commands": []
 }
