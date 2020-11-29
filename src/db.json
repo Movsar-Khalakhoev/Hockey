@@ -189,13 +189,6 @@
       "name": "Имя Фамилия",
       "phone": "+7777 777 77 77",
       "email": "example@mail.ru",
-      "player_position": "ЦП игрок"
-    },
-    {
-      "image": "https://cutt.ly/zhtUZO4",
-      "name": "Имя Фамилия",
-      "phone": "+7777 777 77 77",
-      "email": "example@mail.ru",
       "player_position": "Вратарь"
     },
     {
@@ -206,5 +199,207 @@
       "player_position": "Вратарь"
     }
   ],
-  "cloakroom_commands": []
+  "cloakroom_commands": [],
+  "arenas_arenas": [
+    {
+      "name": "Названиfdsfgdfе ледовой арены",
+      "id": "1",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведется на сайт",
+      "site": "http://www.ledarena.ru/",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "знаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчениезнаasdfsdfasdfчение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    },
+    {
+      "name": "Название ледовой арены",
+      "id": "2",
+      "images": ["https://cutt.ly/zhtUZO4", "https://cutt.ly/zhtUZO4"],
+      "address": "Адресс; Целиком выведеsdfтся на сайт",
+      "coordinates": ["55.794521953672785" ,"37.94621561726508"],
+      "site": "http://www.ledarena.ru/",
+      "social": {
+        "instagram": "https://www.instagram.com/",
+        "vk": "https://vk.com/",
+        "telegram": "https://telegram.org/",
+        "youtube": "https://www.youtube.com/"
+      },
+      "additional": [
+        ["information1", "значение"],
+        ["information2", "значение"],
+        ["information3", "значение"]
+      ],
+      "workingHours": "9:00 - 23:00 по МСК"
+    }
+  ]
 }

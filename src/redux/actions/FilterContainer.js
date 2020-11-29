@@ -14,7 +14,6 @@ export function getFilterContainerAction(filters, path) {
       // Object.keys(filters).forEach(filter => {
       //   url += `${filter}=${filters[filter]}&`
       // })
-      console.log(path, filters)
       const response = await axios.get(`http://localhost:5000/${path}`)
       dispatch(getFilterContainerSuccess(response.data, path))
     } catch (e) {

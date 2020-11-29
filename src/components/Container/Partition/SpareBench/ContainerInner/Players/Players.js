@@ -24,11 +24,7 @@ const Players = ({players, loading, getPlayers}) => {
                     people={item}
                     requiredMessage='Откликнуться'
                     cardClass={styles.player_card}
-                    cardStyle={{
-                      width: '32%',
-                      marginRight: '1%',
-                      marginTop: 10
-                    }}
+                    imageContainerClassName={styles.player_card_image}
                   />)
               : <p className='nothing'>Ничего не найдено</p>
       }

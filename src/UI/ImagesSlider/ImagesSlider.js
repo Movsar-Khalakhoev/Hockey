@@ -23,16 +23,16 @@ const ImagesSlider = (props) => {
   return (
     <div
       style={{width: props.width, height: props.height}}
-      className={styles.images}
+      className={`${styles.images} ${props.sliderClassName}`}
     >
-      <Slider {...settings}>
+      <Slider {...settings} style={{width: '100%', height: '100%'}}>
         {
           props.images.map((image, index) =>
             <Slide
               key={index}
               image={image}
-              width={props.width}
-              height={props.height}
+              width='100%'
+              height='100%'
             />)
         }
       </Slider>

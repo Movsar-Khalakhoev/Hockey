@@ -11,8 +11,7 @@ const ArenaCard = ({arena}) => {
     >
       <ImagesSlider
         images={arena.images}
-        width='230px'
-        height='230px'
+        sliderClassName={styles.slider}
       />
       <ArenaInfo
         info={arena}

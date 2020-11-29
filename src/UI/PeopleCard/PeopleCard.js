@@ -5,7 +5,7 @@ const PeopleCard = props => {
   const {
     cardStyle = {},
     cardClass = '',
-    imageContainerStyle = {},
+    imageContainerClassName = '',
     contentStyle = {},
     people,
     requiredMessage
@@ -18,10 +18,7 @@ const PeopleCard = props => {
     >
       {
         people.image
-          ? <div
-              style={imageContainerStyle}
-              className={styles.image_container}
-            >
+          ? <div className={`${styles.image_container} ${imageContainerClassName}`}>
               <img className={styles.image} src={people.image} alt='Карточка'/>
             </div>
           : null

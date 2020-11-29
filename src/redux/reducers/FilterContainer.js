@@ -24,6 +24,12 @@ const initialState = {
     { value: 'name', label: 'Наadsfasзвание' },
     { value: 'player_position', label: 'Позицияasdfasd игрока' }
   ],
+  arenas_arenas: [],
+  arenas_arenasFiltersList: [
+    { value: 'city', label: 'Горasdfasdfод' },
+    { value: 'name', label: 'Наadsfasзвание' },
+    { value: 'player_position', label: 'Позицияasdfasd игрока' }
+  ],
   loading: false,
   error: null
 }

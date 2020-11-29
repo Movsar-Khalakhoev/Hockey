@@ -4,6 +4,7 @@ import styles from './ItemsContainerFilter.module.sass'
 import {useLocation} from 'react-router-dom'
 import {getFilterContainerAction} from '../../redux/actions/FilterContainer'
 import {connect} from 'react-redux'
+import Hamburger from '../Hamburger/Hamburger'
 
 const ItemsContainerFilter = props => {
 
@@ -17,6 +18,8 @@ const ItemsContainerFilter = props => {
 
   const [activeFiltersList, setActiveFiltersList] = useState([])
   const [filters, setFilters] = useState({})
+  const [filtersComponentActive, setFiltersComponentActive] = useState(false)
+  const [itemsCount, setItemsCount] = useState(null)
   const location = useLocation()
   let timeout
 
@@ -32,7 +35,9 @@ const ItemsContainerFilter = props => {
   }
 
   function setUpdatedItemsList(filters, path) {
+    setItemsCount(props[path].length)
     getItems(filters, path)
+    console.log(itemsCount)
   }
 
   function onChangeFilterHandler(event, filterName, path) {
@@ -45,6 +50,10 @@ const ItemsContainerFilter = props => {
     }, 500)
   }
 
+  function changeFiltersComponentState() {
+    setFiltersComponentActive(!filtersComponentActive)
+  }
+
   useEffect(() => {
     setActiveFiltersList([])
     setFilters({})
@@ -52,11 +61,23 @@ const ItemsContainerFilter = props => {
 
   return (
     <div className={`${contentClass} ${styles.content}`}>
+      <Hamburger
+        isActive={filtersComponentActive}
+        className={styles.hamburger}
+        linesColor='#fff'
+        text='Фильтры'
+        textClassName={styles.hamburger_text}
+        wrapperClassName={styles.hamburger_wrapper}
+        linesClassName={styles.hamburger_lines}
+        onClick={changeFiltersComponentState}
+      />
       <Filters
         {...filterAttrs}
         onChangeFiltersList={onChangeFiltersListHandler}
         activeFilters={activeFiltersList || []}
         onChangeFilterInput={onChangeFilterHandler}
+        className={filtersComponentActive ? '' : styles.filters}
+        itemsCount={itemsCount}
       />
       <div className={`${containerClass} ${styles.container}`}>
         {children}
@@ -66,6 +87,12 @@ const ItemsContainerFilter = props => {
   )
 }
 
+function mapStateToProps(state) {
+  return {
+    spareBench_commands: state.filterContainer.spareBench_commands,
+    spareBench_players: state.filterContainer.spareBench_players
+  }
+}
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -73,4 +100,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(null, mapDispatchToProps)(ItemsContainerFilter)
+export default connect(mapStateToProps, mapDispatchToProps)(ItemsContainerFilter)
