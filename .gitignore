@@ -3,3 +3,6 @@
 /build
 .env.local
 yarn-error.log
+.firebaserc
+firebase.json
+.firebase
