@@ -37,7 +37,6 @@ const ItemsContainerFilter = props => {
   function setUpdatedItemsList(filters, path) {
     setItemsCount(props[path].length)
     getItems(filters, path)
-    console.log(itemsCount)
   }
 
   function onChangeFilterHandler(event, filterName, path) {
@@ -90,7 +89,9 @@ const ItemsContainerFilter = props => {
 function mapStateToProps(state) {
   return {
     spareBench_commands: state.filterContainer.spareBench_commands,
-    spareBench_players: state.filterContainer.spareBench_players
+    spareBench_players: state.filterContainer.spareBench_players,
+    cloakroom_commands: state.filterContainer.cloakroom_commands,
+    arenas_arenas: state.filterContainer.arenas_arenas
   }
 }
 
