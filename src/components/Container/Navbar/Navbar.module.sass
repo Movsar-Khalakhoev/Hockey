@@ -1,3 +1,5 @@
+@import 'src/_stylesVariables.sass'
+
 $partition_text_color: whitesmoke
 $background_color: #2e519e
 
@@ -14,17 +16,21 @@ $background_color: #2e519e
   border-bottom: 2px solid darken($background_color, 20%)
   z-index: 10000
   &_list
-    height: 70%
     display: flex
     justify-content: center
     align-items: center
     list-style-type: none
 
+.container
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+
 .nav_item
   font-size: 17px
   font-weight: bold
   margin-right: 10px
-  height: 100%
   background-color: $background_color
   transition: all .5s
   &:last-child
@@ -44,11 +50,12 @@ $background_color: #2e519e
   -webkit-border-radius: 3px
   -moz-border-radius: 3px
   border-radius: 3px
-  padding: 0 15px
+  padding: $button_top-bottom_padding $button_left-right_padding
   text-decoration: none
   &:hover
     color: darken($partition_text_color, 10%)
     border-color: darken($partition_text_color, 10%)
+
 
 .nav_link.active
   color: darken($partition_text_color, 10%)
@@ -59,7 +66,7 @@ $background_color: #2e519e
   background-color: darken($background_color, 10%)
   border: none
   margin-right: 10px
-  padding: 0 15px
+  padding: $button_top-bottom_padding $button_left-right_padding
   -webkit-border-radius: 5px
   -moz-border-radius: 5px
   border-radius: 5px
@@ -67,6 +74,56 @@ $background_color: #2e519e
   font-size: 15px
   font-weight: bold
   cursor: pointer
-  transition: all .3s
+  transition: background-color .3s
   &:hover
     background-color: darken($background_color, 20%)
+
+.hamburger
+  display: none !important
+
+@media (max-width: 992px)
+  .nav_link, .sign_in, .sign_up
+    padding: $button_top-bottom_padding $button_left-right_padding_992
+
+@media (max-width: 768px)
+  .navbar
+    &_list
+      flex-direction: column
+      align-items: flex-start
+      order: 2
+
+  .container
+    position: absolute
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    height: 100vh
+    width: 270px
+    top: 0
+    bottom: 0
+    left: 0
+    background-color: $main_color
+    padding: 20px 30px 0 30px
+    transform: translateX(-100%)
+    transition: all .3s
+    border-right: 1px solid #000
+
+  .nav
+    &_item
+      margin-bottom: 15px
+      width: 100%
+
+  .sign_in
+    margin-bottom: 10px
+
+  .sign_in, .sign_up
+    width: 100%
+
+  .auth
+    margin-bottom: 80px
+
+  .hamburger
+    position: absolute !important
+    top: 15px !important
+    right: -40px !important
+    display: flex !important

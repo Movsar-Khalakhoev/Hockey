@@ -86,3 +86,29 @@
   -webkit-border-radius: 50%
   -moz-border-radius: 50%
   border-radius: 50%
+
+@media (max-width: 992px)
+  .command
+    &_card
+      height: 180px
+    &_image_container
+      height: 120px
+  .give_up
+    bottom: 5px
+
+@media (max-width: 576px)
+  .command
+    &_card
+      height: 430px
+      flex-direction: column
+      align-items: center
+      padding: 5px
+    &_info
+      margin-top: 10px
+    &_image_container
+      width: 80%
+      height: 230px
+      margin: 0
+    &_name
+      width: 100%
+      text-align: center

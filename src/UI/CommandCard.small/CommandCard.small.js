@@ -41,12 +41,12 @@ const CommandCardSmall = ({index, command}) => {
               </div>
             : null
         }
-        {
-          command.player_position
-            ? <p className={styles.give_up}>Откликнуться</p>
-            : null
-        }
       </div>
+      {
+        command.player_position
+          ? <p className={styles.give_up}>Откликнуться</p>
+          : null
+      }
     </div>
   )
 }

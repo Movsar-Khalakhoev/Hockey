@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import ItemsContainerFilter from '../../../../UI/ItemsContainerFilter/ItemsContainerFilter'
 import ContainerInner from './ContainerInner/ContainerInner'
 
-const SpareBench = ({commandFiltersList, playerFiltersList}) => {
+const SpareBench = ({commandsFiltersList, playersFiltersList}) => {
   return (
     <div className={styles.spare_bench}>
       <Header />
@@ -17,12 +17,12 @@ const SpareBench = ({commandFiltersList, playerFiltersList}) => {
             {
               renderPath: '/app/spareBench/commands',
               getDataPath: 'spareBench_commands',
-              filters: commandFiltersList
+              filters: commandsFiltersList
             },
             {
               renderPath: '/app/spareBench/players',
               getDataPath: 'spareBench_players',
-              filters: playerFiltersList
+              filters: playersFiltersList
             },
             {
               renderPath: '/app/spareBench',
@@ -31,7 +31,6 @@ const SpareBench = ({commandFiltersList, playerFiltersList}) => {
             }
           ],
         }}
-        data_path='spareBench_'
       >
         <ContainerInner />
       </ItemsContainerFilter>
@@ -42,8 +41,8 @@ const SpareBench = ({commandFiltersList, playerFiltersList}) => {
 
 function mapStateToProps(state) {
   return {
-    commandFiltersList: state.filterContainer.spareBench_commandsFiltersList,
-    playerFiltersList: state.filterContainer.spareBench_playersFiltersList
+    commandsFiltersList: state.filterContainer.spareBench_commandsFiltersList,
+    playersFiltersList: state.filterContainer.spareBench_playersFiltersList
   }
 }
 

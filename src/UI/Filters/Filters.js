@@ -21,6 +21,7 @@ const Filters = props => {
     } else if (action.removedValue) {
       setNewFilter(null)
     }
+
     onChangeFiltersList(value, action, path)
   }
 
@@ -29,11 +30,20 @@ const Filters = props => {
       <>
         <Select
           key={index}
+          className={styles.select}
           options={options}
           isMulti
           isClearable={false}
           onChange={(value, action) => updateFiltersList(value, action, path)}
           placeholder='Выберите фильтр'
+          styles={{
+            placeholder: (provided) => ({
+              ...provided,
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              overflow: 'hidden'
+            })
+          }}
         />
         <div className={styles.list}>
           {
@@ -48,12 +58,13 @@ const Filters = props => {
             })
           }
         </div>
+        <span className={styles.items_count}>Найдено: {props.itemsCount}</span>
       </>
     )
   }
 
   return (
-    <div className={styles.filters}>
+    <div className={`${styles.filters} ${props.className}`}>
       <div className={styles.content}>
         <Switch>
           {

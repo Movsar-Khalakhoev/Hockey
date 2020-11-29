@@ -1,8 +1,16 @@
-.arenas_container
+@import 'src/_stylesVariables.sass'
+
+.arenas
   display: flex
   justify-content: center
+  width: calc(#{$items_list_component_width} + #{$filter_component_width} + 10px)
+  height: calc(100vh - #{$navbar_height})
+  margin: auto
+  padding: 5px 0
+
+.content
   width: 100%
-  height: calc(100vh - 65px)
+  height: 100%
 
 .arenas_list
   position: relative
@@ -11,11 +19,11 @@
   margin: 5px 0
   overflow: auto
   z-index: 4
-  &_overlay
-    position: absolute
-    height: calc(100% - 10px)
-    width: 780px
-    background-color: grey
-    margin: 5px 0
-    border-radius: 5px
-    opacity: .7
+
+@media (max-width: 1210px)
+  .arenas
+    width: 90%
+
+@media (max-width: 768px)
+  .arenas
+    width: 96%

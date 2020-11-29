@@ -6,6 +6,10 @@
   padding: 20px
   position: relative
   width: $filter_component_width
+  transition: transform .3s
+
+.select
+  width: 100%
 
 .content
   position: relative
@@ -13,6 +17,15 @@
 
 .list
   margin-top: 30px
+
+.items_count
+  display: none
+  background-color: $main_color_darken
+  padding: 5px 10px
+  border-radius: 16px
+  color: $button_text_color
+  font-weight: $button_text_font_weight
+  margin-top: 10px
 
 .overlay
   position: absolute
@@ -23,3 +36,33 @@
   background-color: #c1c1c1
   opacity: .5
   z-index: 1
+
+@media (max-width: 1210px)
+  .filters
+    width: $filter_component_width_1210
+
+@media (max-width: 992px)
+  .filters
+    width: $filter_component_width_992
+
+@media (max-width: 768px)
+  .filters
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: 5
+    padding: 50px 10px 0 10px
+    border-right: 1px solid #000
+    width: $filter_component_width_768
+
+  .overlay
+    opacity: 1
+    background-color: $main_color
+
+@media (max-width: 400px)
+  .filters
+    width: 100%
+    border: none
+
+  .items_count
+    display: inline-block

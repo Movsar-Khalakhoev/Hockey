@@ -8,7 +8,7 @@
   width: 100%
   height: $search_header_height
   background-color: $main_color
-  z-index: 3
+  z-index: 5
   border-radius: $components_border_radius
 
 .search_mode
@@ -26,7 +26,7 @@
   align-items: center
   justify-content: center
   height: 40px
-  padding: 0 30px
+  padding: $button_top-bottom_padding $button_left-right_padding
   background-color: $main_color_darken
   border: none
   cursor: pointer
@@ -35,9 +35,16 @@
   font-size: $button_text_font_size
   font-weight: $button_text_font_weight
   color: $button_text_color
-  transition: all $first_transition
+  transition: background-color $first_transition
   &:hover
     background-color: $main_color_darken_extra
+
+.select
+  display: none
+  width: 200px
+  margin-left: 20px
+  &::placeholder
+    white-space: nowrap
 
 .active
   background-color: $main_color_darken_extra
@@ -47,3 +54,36 @@
 
 .submit_yours
   margin-right: 20px
+
+@media (max-width: 992px)
+  .commands_mode, .players_mode, .submit_yours
+    padding: $button_top-bottom_padding $button_left-right_padding_992
+
+@media (max-width: 768px)
+  .select
+    display: block
+
+  .search_mode
+    display: none
+
+  .commands_mode
+    background-color: $main_color_lighten_extra
+    margin: 0 2px 5px 2px
+    border: none
+
+@media (max-width: 576px)
+  .select
+    width: 180px
+  .submit_yours
+    width: 120px
+    font-size: $button_text_font_size_992
+
+@media (max-width: 400px)
+  .select
+    width: auto
+    flex-grow: 1
+    margin: 0 10px
+
+
+  .submit_yours
+    margin-right: 10px

@@ -17,7 +17,48 @@
   border-radius: $components_border_radius
   overflow: hidden
 
+.hamburger
+  width: 20px
+  height: 20px
+  &_wrapper
+    display: none
+    align-items: center
+    position: absolute
+    z-index: 6
+    top: 10px
+    left: 10px
+    background-color: $main_color_darken
+    padding: 5px 15px
+    border-radius: 20px
+  &_text
+    margin-left: 5px
+    color: $button_text_color
+    font-weight: $button_text_font_weight
+  &_lines
+    height: 4px
+
 .container
   position: relative
   width: $items_list_component_width
   padding: 5px
+
+@media (max-width: 1210px)
+  .container
+    width: calc(100% - #{$filter_component_width_1210} - 10px)
+
+@media (max-width: 992px)
+  .container
+    width: calc(100% - #{$filter_component_width_992} - 5px)
+
+@media (max-width: 768px)
+  .filters
+    transform: translateX(-100%)
+
+  .container
+    width: 100%
+    padding-top: 45px
+
+  .hamburger
+    &_wrapper
+      display: flex
+
